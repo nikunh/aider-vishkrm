@@ -1,0 +1,52 @@
+[
+    {
+        "model": "google/gemini-2.0-flash-thinking-exp:free",
+        "command": "aider --model google/gemini-2.0-flash-thinking-exp:free --task brainstorming --generate-hld",
+        "use_case": "High-level design (HLD) and brainstorming"
+    },
+    {
+        "model": "google/gemini-2.0-flash-exp:free",
+        "command": "aider --model google/gemini-2.0-flash-exp:free --task planning --generate-lld",
+        "use_case": "Low-level design (LLD) and detailed planning"
+    },
+    {
+        "model": "meta-llama/llama-3.2-3b-instruct:free",
+        "command": "aider --model meta-llama/llama-3.2-3b-instruct:free --task implementation --optimize-code",
+        "use_case": "Code implementation and optimization"
+    },
+    {
+        "model": "microsoft/phi-3-medium-128k-instruct:free",
+        "command": "aider --model microsoft/phi-3-medium-128k-instruct:free --task documentation --auto-comment",
+        "use_case": "Auto-commenting and documentation"
+    },
+    {
+        "model": "google/gemma-2-9b-it:free",
+        "command": "aider --model google/gemma-2-9b-it:free --task review --refactor-code",
+        "use_case": "Code review and refactoring"
+    },
+    {
+        "model": "google/learnlm-1.5-pro-experimental:free",
+        "command": "aider --model google/learnlm-1.5-pro-experimental:free --task learning --analyze-code-patterns",
+        "use_case": "Analyzing code patterns and suggesting improvements"
+    },
+    {
+        "model": "meta-llama/llama-3.2-90b-vision-instruct:free",
+        "command": "aider --model meta-llama/llama-3.2-90b-vision-instruct:free --task visualization --generate-diagrams",
+        "use_case": "Generating visual representations of code structure"
+    },
+    {
+        "model": "qwen/qwen-2-7b-instruct:free",
+        "command": "aider --model qwen/qwen-2-7b-instruct:free --task code-generation --implement-algorithms",
+        "use_case": "Implementing complex algorithms and data structures"
+    },
+    {
+        "model": "mistralai/mistral-7b-instruct:free",
+        "command": "aider --model mistralai/mistral-7b-instruct:free --task debugging --analyze-errors",
+        "use_case": "Debugging and error analysis"
+    },
+    {
+        "model": "openchat/openchat-7b:free",
+        "command": "aider --model openchat/openchat-7b:free --task collaboration --discuss-code",
+        "use_case": "Collaborative coding discussions and pair programming"
+    }
+]

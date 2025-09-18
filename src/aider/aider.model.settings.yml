@@ -1,0 +1,11 @@
+# - name: openrouter/mistralai/mistral-large-2411
+#   extra_params:
+#     temperature: 0.7
+
+# - name: ollama/codellama
+#   extra_params:
+#     num_ctx: 8192
+
+# - name: openrouter/anthropic/claude-3-opus-20240229
+#   extra_params:
+#     temperature: 0.2

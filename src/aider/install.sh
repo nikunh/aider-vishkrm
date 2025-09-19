@@ -12,10 +12,11 @@ USER_HOME="/home/${USERNAME}"
 if ! command -v aider &> /dev/null; then
     echo "Installing aider via pipx..."
     if command -v pipx &> /dev/null; then
-        # Install as the target user
-        if [ "$USER" != "$USERNAME" ] && [ -d "$USER_HOME" ]; then
+        # Install as the target user if sudo is available and we're running as different user
+        if [ "$USER" != "$USERNAME" ] && [ -d "$USER_HOME" ] && command -v sudo &> /dev/null; then
             sudo -u "$USERNAME" pipx install aider-chat
         else
+            # Install as current user or fallback to direct pipx install
             pipx install aider-chat
         fi
     else
@@ -114,4 +115,8 @@ create_environment_fragment
 echo "Aider installation completed."
 
 # Clean up
-sudo apt-get clean
+if command -v sudo &> /dev/null; then
+    sudo apt-get clean
+else
+    apt-get clean
+fi

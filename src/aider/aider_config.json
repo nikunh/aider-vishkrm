@@ -1,0 +1,161 @@
+{
+    "models": [
+      {
+        "title": "Google: Gemini 2.0 Flash Thinking Experimental (free)",
+        "provider": "google",
+        "model": "gemini-2.0-flash-thinking-exp:free",
+        "use_case": "Experimental flash thinking"
+      },
+      {
+        "title": "Google: Gemini Flash 2.0 Experimental (free)",
+        "provider": "google",
+        "model": "gemini-2.0-flash-exp:free",
+        "use_case": "Experimental flash processing"
+      },
+      {
+        "title": "Google: Gemini Experimental 1206 (free)",
+        "provider": "google",
+        "model": "gemini-exp-1206:free",
+        "use_case": "Experimental language processing"
+      },
+      {
+        "title": "Google: Gemini Experimental 1121 (free)",
+        "provider": "google",
+        "model": "gemini-exp-1121:free",
+        "use_case": "Experimental language processing"
+      },
+      {
+        "title": "Google: LearnLM 1.5 Pro Experimental (free)",
+        "provider": "google",
+        "model": "learnlm-1.5-pro-experimental:free",
+        "use_case": "Experimental learning and language modeling"
+      },
+      {
+        "title": "Google: Gemini Experimental 1114 (free)",
+        "provider": "google",
+        "model": "gemini-exp-1114:free",
+        "use_case": "Experimental language processing"
+      },
+      {
+        "title": "Meta: Llama 3.2 3B Instruct (free)",
+        "provider": "meta-llama",
+        "model": "llama-3.2-3b-instruct:free",
+        "use_case": "Instruction following and general language tasks"
+      },
+      {
+        "title": "Meta: Llama 3.2 1B Instruct (free)",
+        "provider": "meta-llama",
+        "model": "llama-3.2-1b-instruct:free",
+        "use_case": "Lightweight instruction following"
+      },
+      {
+        "title": "Meta: Llama 3.2 90B Vision Instruct (free)",
+        "provider": "meta-llama",
+        "model": "llama-3.2-90b-vision-instruct:free",
+        "use_case": "Vision-language tasks and instruction following"
+      },
+      {
+        "title": "Meta: Llama 3.2 11B Vision Instruct (free)",
+        "provider": "meta-llama",
+        "model": "llama-3.2-11b-vision-instruct:free",
+        "use_case": "Vision-language tasks and instruction following"
+      },
+      {
+        "title": "Google: Gemini Flash 1.5 Experimental",
+        "provider": "google",
+        "model": "gemini-flash-1.5-exp",
+        "use_case": "Experimental flash processing"
+      },
+      {
+        "title": "Google: Gemini Flash 1.5 8B Experimental",
+        "provider": "google",
+        "model": "gemini-flash-1.5-8b-exp",
+        "use_case": "Experimental flash processing with 8B parameters"
+      },
+      {
+        "title": "Google: Gemini Pro 1.5 Experimental",
+        "provider": "google",
+        "model": "gemini-pro-1.5-exp",
+        "use_case": "Advanced experimental language processing"
+      },
+      {
+        "title": "Meta: Llama 3.1 405B Instruct (free)",
+        "provider": "meta-llama",
+        "model": "llama-3.1-405b-instruct:free",
+        "use_case": "Large-scale instruction following and language tasks"
+      },
+      {
+        "title": "Meta: Llama 3.1 8B Instruct (free)",
+        "provider": "meta-llama",
+        "model": "llama-3.1-8b-instruct:free",
+        "use_case": "Instruction following and general language tasks"
+      },
+      {
+        "title": "Meta: Llama 3.1 70B Instruct (free)",
+        "provider": "meta-llama",
+        "model": "llama-3.1-70b-instruct:free",
+        "use_case": "Advanced instruction following and language tasks"
+      },
+      {
+        "title": "Qwen 2 7B Instruct (free)",
+        "provider": "qwen",
+        "model": "qwen-2-7b-instruct:free",
+        "use_case": "Instruction following and general language tasks"
+      },
+      {
+        "title": "Google: Gemma 2 9B (free)",
+        "provider": "google",
+        "model": "gemma-2-9b-it:free",
+        "use_case": "General language processing and understanding"
+      },
+      {
+        "title": "Mistral: Mistral 7B Instruct (free)",
+        "provider": "mistralai",
+        "model": "mistral-7b-instruct:free",
+        "use_case": "Instruction following and general language tasks"
+      },
+      {
+        "title": "Microsoft: Phi-3 Mini 128K Instruct (free)",
+        "provider": "microsoft",
+        "model": "phi-3-mini-128k-instruct:free",
+        "use_case": "Lightweight instruction following with extended context"
+      },
+      {
+        "title": "Microsoft: Phi-3 Medium 128K Instruct (free)",
+        "provider": "microsoft",
+        "model": "phi-3-medium-128k-instruct:free",
+        "use_case": "Instruction following with extended context"
+      },
+      {
+        "title": "Meta: Llama 3 8B Instruct (free)",
+        "provider": "meta-llama",
+        "model": "llama-3-8b-instruct:free",
+        "use_case": "Instruction following and general language tasks"
+      },
+      {
+        "title": "OpenChat 3.5 7B (free)",
+        "provider": "openchat",
+        "model": "openchat-7b:free",
+        "use_case": "Open-domain conversation and language tasks"
+      },
+      {
+        "title": "Toppy M 7B (free)",
+        "provider": "undi95",
+        "model": "toppy-m-7b:free",
+        "use_case": "General language processing and understanding"
+      },
+      {
+        "title": "Hugging Face: Zephyr 7B (free)",
+        "provider": "huggingfaceh4",
+        "model": "zephyr-7b-beta:free",
+        "use_case": "General language processing and understanding"
+      },
+      {
+        "title": "MythoMax 13B (free)",
+        "provider": "gryphe",
+        "model": "mythomax-l2-13b:free",
+        "use_case": "Mythological and creative text generation"
+      }
+    ]
+  }
+  

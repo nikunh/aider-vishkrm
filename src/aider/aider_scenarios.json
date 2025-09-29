@@ -1,0 +1,72 @@
+[
+    {
+        "scenario": "High-Level Design (HLD) for a new feature",
+        "steps": [
+            "Run the command: aider --model google/gemini-2.0-flash-thinking-exp:free --task brainstorming --generate-hld",
+            "Provide a description of the feature and ask the model to generate a high-level architecture diagram."
+        ]
+    },
+    {
+        "scenario": "Low-Level Design (LLD) for a specific module",
+        "steps": [
+            "Run the command: aider --model google/gemini-2.0-flash-exp:free --task planning --generate-lld",
+            "Describe the module's functionality and request detailed class diagrams and flowcharts."
+        ]
+    },
+    {
+        "scenario": "Code Implementation and Optimization",
+        "steps": [
+            "Run the command: aider --model meta-llama/llama-3.2-3b-instruct:free --task implementation --optimize-code",
+            "Provide the initial code snippet and ask the model to optimize it for performance and readability."
+        ]
+    },
+    {
+        "scenario": "Auto-Commenting and Documentation",
+        "steps": [
+            "Run the command: aider --model microsoft/phi-3-medium-128k-instruct:free --task documentation --auto-comment",
+            "Provide the codebase and request inline comments and a summary of the code's functionality."
+        ]
+    },
+    {
+        "scenario": "Code Review and Refactoring",
+        "steps": [
+            "Run the command: aider --model google/gemma-2-9b-it:free --task review --refactor-code",
+            "Submit the code for review and ask the model to suggest improvements and refactor for better maintainability."
+        ]
+    },
+    {
+        "scenario": "Analyzing Code Patterns",
+        "steps": [
+            "Run the command: aider --model google/learnlm-1.5-pro-experimental:free --task learning --analyze-code-patterns",
+            "Provide a codebase and ask the model to identify common patterns and suggest best practices."
+        ]
+    },
+    {
+        "scenario": "Generating Visual Representations",
+        "steps": [
+            "Run the command: aider --model meta-llama/llama-3.2-90b-vision-instruct:free --task visualization --generate-diagrams",
+            "Describe a complex system architecture and request a visual representation or diagram."
+        ]
+    },
+    {
+        "scenario": "Implementing Complex Algorithms",
+        "steps": [
+            "Run the command: aider --model qwen/qwen-2-7b-instruct:free --task code-generation --implement-algorithms",
+            "Describe a complex algorithm or data structure and ask the model to implement it efficiently."
+        ]
+    },
+    {
+        "scenario": "Debugging and Error Analysis",
+        "steps": [
+            "Run the command: aider --model mistralai/mistral-7b-instruct:free --task debugging --analyze-errors",
+            "Provide code with errors or unexpected behavior and ask the model to identify and explain the issues."
+        ]
+    },
+    {
+        "scenario": "Collaborative Coding Discussion",
+        "steps": [
+            "Run the command: aider --model openchat/openchat-7b:free --task collaboration --discuss-code",
+            "Start a discussion about a coding problem or architecture decision, simulating a pair programming session."
+        ]
+    }
+]

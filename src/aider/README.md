@@ -221,7 +221,7 @@ aider --replay session.json
 │   ├── aider_commands.json      # Custom commands
 │   ├── aider_config.json        # Base configuration
 │   ├── aider_scenarios.json     # Development scenarios
-│   ├── babaji_aider.py          # Custom aider extensions
+│   ├── vishkrm_aider.py         # Custom aider extensions
 │   ├── env                      # Environment setup
 │   ├── environments.sh          # Environment detection
 │   └── requirements.txt         # Python dependencies

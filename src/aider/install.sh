@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/bash
 set -e
 
 # Logging mechanism for debugging
@@ -16,9 +16,11 @@ log_debug "Environment: USER=$USER HOME=$HOME"
 # Install Aider using pipx
 echo "Installing Aider..."
 
-# Get username from environment or default to babaji
-USERNAME=${USERNAME:-"babaji"}
-USER_HOME="/home/${USERNAME}"
+# Audit fix 2026-05-15: resolve runtime user/home/group dynamically (no hardcoded babaji)
+USERNAME="${USERNAME:-${_REMOTE_USER:-vishkrm}}"
+USER_HOME="$(getent passwd "$USERNAME" 2>/dev/null | cut -d: -f6)"
+[ -z "$USER_HOME" ] && USER_HOME="/home/${USERNAME}"
+USER_GROUP="$(id -gn "$USERNAME" 2>/dev/null || echo users)"
 
 # Install aider using pipx as the non-root user
 if ! command -v aider &> /dev/null; then
@@ -51,7 +53,7 @@ if [ -d "$SCRIPT_DIR/configs" ]; then
         mkdir -p "$USER_HOME/.aider"
         cp -rf "$SCRIPT_DIR/configs"/* "$USER_HOME/.aider/"
         if [ "$USER" != "$USERNAME" ]; then
-            chown -R ${USERNAME}:${USERNAME} "$USER_HOME/.aider" 2>/dev/null || chown -R ${USERNAME}:users "$USER_HOME/.aider" 2>/dev/null || true
+            chown -R "${USERNAME}:${USER_GROUP}" "$USER_HOME/.aider" 2>/dev/null || true
         fi
     fi
 fi
@@ -114,7 +116,7 @@ EOF
         mkdir -p "$USER_HOME/.ohmyzsh_source_load_scripts"
         ln -sf "$fragment_source_file" "$USER_HOME/.ohmyzsh_source_load_scripts/.${feature_name}.zshrc"
         if [ "$USER" != "$USERNAME" ]; then
-            chown -h ${USERNAME}:${USERNAME} "$USER_HOME/.ohmyzsh_source_load_scripts/.${feature_name}.zshrc" 2>/dev/null || chown -h ${USERNAME}:users "$USER_HOME/.ohmyzsh_source_load_scripts/.${feature_name}.zshrc" 2>/dev/null || true
+            chown -h "${USERNAME}:${USER_GROUP}" "$USER_HOME/.ohmyzsh_source_load_scripts/.${feature_name}.zshrc" 2>/dev/null || true
         fi
     fi
     

@@ -16,8 +16,18 @@ log_debug "Environment: USER=$USER HOME=$HOME"
 # Install Aider using pipx
 echo "Installing Aider..."
 
-# Audit fix 2026-05-15: resolve runtime user/home/group dynamically (no hardcoded babaji)
-USERNAME="${USERNAME:-${_REMOTE_USER:-vishkrm}}"
+# Audit fix 2026-05-15 + 2026-05-18: resolve runtime user/home/group dynamically.
+# Reject _REMOTE_USER=root (which devcontainer features can set at build time and
+# would defeat the fallback chain — landing pipx-installed aider in /root/.local/bin
+# instead of $USER_HOME/.local/bin, invisible to the runtime user).
+USERNAME="${USERNAME:-${_REMOTE_USER:-}}"
+if [ -z "$USERNAME" ] || [ "$USERNAME" = "root" ]; then
+    if getent passwd vishkrm >/dev/null 2>&1; then
+        USERNAME=vishkrm
+    else
+        USERNAME=$(getent passwd | awk -F: '$3>=1000 && $1!="nobody" {print $1; exit}')
+    fi
+fi
 USER_HOME="$(getent passwd "$USERNAME" 2>/dev/null | cut -d: -f6)"
 [ -z "$USER_HOME" ] && USER_HOME="/home/${USERNAME}"
 USER_GROUP="$(id -gn "$USERNAME" 2>/dev/null || echo users)"
